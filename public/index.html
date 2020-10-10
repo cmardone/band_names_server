@@ -17,7 +17,10 @@
       console.log('client disconnected from server');
     });
     socket.emit('message', {name: 'Cristóbal Alfonso' });
-    socket.on('message', (payload) => console.log(payload))
+    socket.on('activeBands', (payload) => {
+      console.clear();
+      console.table(payload);
+    });
   </script>
 </body>
 </html>
